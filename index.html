@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard LifeStyle</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <header>
+    <h1><i class="fas fa-heartbeat"></i> Dashboard LifeStyle</h1>
+  </header>
+
+  <section class="dashboard fade-in">
+    <canvas id="lifestyleChart"></canvas>
+    <div class="task-images">
+      <div>
+        <h3>🏃 Exercício</h3>
+        <img src="https://ts2.mm.bing.net/th?id=OIP.wQZGdmsx34sr3IBjtBSJbAHaE7&pid=15.1" alt="Exercício" />
+      </div>
+          <div>
+        <h3>😴 Sono</h3>
+        <img src="https://ts3.mm.bing.net/th?id=OIP.HMsesllIyQQ1nsRqZ15ELwHaEK&pid=15.1" alt="Sono" />
+      </div>
+      <div>
+        <h3>🥗 Alimentação</h3>
+        <img src="https://ts1.mm.bing.net/th?id=OIP.vVc6NbWEJBCpNYoiW_9Q8wHaE7&pid=15.1" alt="Alimentação" />
+      </div>
+      <div>
+        <h3>😊 Humor</h3>
+        <img src="https://ts3.mm.bing.net/th?id=OIP.yoyt2A7BvI74SE63GqW8KAHaHa&pid=15.1" alt="Humor" />
+      </div>
+    </div>
+    <div class="controls">
+      <button onclick="createHabit()">Criar Hábito</button>
+      <button onclick="readHabits()">Listar Hábitos</button>
+      <button onclick="updateHabit()">Atualizar Hábito</button>
+      <button onclick="deleteHabit()">Deletar Hábito</button>
+    </div>
+    <div id="habitList"></div>
+  </section>
+
+  <section class="weather fade-in">
+    <h2><i class="fas fa-cloud-sun"></i> Clima Atual</h2>
+    <button onclick="getWeather()">Detectar Clima</button>
+    <div id="weatherResult"></div>
+  </section>
+
+  <section class="profile fade-in">
+  <h2><i class="fas fa-user-plus"></i> Gerenciar Perfis</h2>
+  <input type="text" id="profileName" placeholder="Nome" />
+  <input type="text" id="profileCountry" placeholder="País" />
+  <input type="email" id="profileEmail" placeholder="Email" />
+  <input type="text" id="profileImage" placeholder="URL da Imagem" />
+  <button onclick="addProfile()">Adicionar Perfil</button>
+  <button onclick="exportProfiles()">Exportar Perfis</button>
+  <div id="profileList"></div>
+</section>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
